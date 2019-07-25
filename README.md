@@ -5,7 +5,7 @@ This page will discuss an original concept of how to design Tableau report conte
 We inherit the same idea in the tableau reporting framework. At first, we introduce a robust naming convention for creating every single Tableau calculations within a workbook. Once we have created every calculation by this standard, we go on to introduce a Tableau folder structure which would logically group the data source fields as well as calculations built on top of them. 
 Finally, we present an API tool which will perform most of these design transitions automatically with no impact on the visualizations. 
 
-The automation feauture is the centre piece of  this design proposal.Without which the solution would have had no teeth.The automation part makes the solution attractive since making these design tweaks manually requires significant manual efforts and would have otherwise proved a strong letdown for this concept to apply to realtime use cases.
+The automation feauture is the centre piece of  this design proposal.It is the automation part that makes the solution attractive since making these design tweaks manually requires significant manual efforts and would have otherwise proved a strong letdown when trying to use this proposal in realtime usecases.
 
 Having said that ,Let us get started with the the first piece.
 
