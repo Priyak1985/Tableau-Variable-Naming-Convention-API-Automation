@@ -68,5 +68,4 @@ The API works on any tableau version. Most of the reports I have tested have tra
 
 I am aware of the fact that certain use cases will require to keep the database column renames in the reports. I have thus shared my python code herewith. those who intend to use the tool only for the purpose of restructuring the tableau calculations could very well comment out the section of the code in which the database columns renames are restored.
 
-I hope the tool and the concept shared herewith are received well and eases out a sizable amount of maintenance overhead for tableau repositories.
-I look forward to the feedback from users who get to test it against their tabelea workbooks. 
+I hope the tool and the concept shared herewith are received well and eases out a sizable amount of maintenance overhead.The solution should be able to scale to a large number of report repository.I look forward to the feedback from users who get to test it against their tabeleau workbooks. 
