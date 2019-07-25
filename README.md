@@ -10,8 +10,7 @@ Having said that ,Let us get started with the the first piece.
 
 #  Details of The Naming Convention
 
-The two major field identifiers within tableau are the "Dimension" and "Measure". The proposed variable structure is applied to both the dimension and Measure pane. The concept is similar for both dimension and measure variables.Details follow:
-
+The two major field identifiers within tableau are the "Dimension" and "Measure". The proposed variable structure covers both the dimension and Measure elements.
 ###  Dimension Pane
 Each element in a dimension pane can be classified by any one of the following.
 
