@@ -10,7 +10,7 @@ Having said that ,Let us get started with the the first piece.
 
 #  Details of The Naming Convention
 
-The two major field identifiers within Tableau are the "Dimension" and "Measure". The proposed solution covers both the dimension and Measure elements.
+The two major field identifiers within Tableau are the "Dimension" and "Measure". The proposed solution covers both the Dimension and Measure elements.
 ###  Dimension Pane
 Each element in a dimension pane can be classified by any one of the following.
 
