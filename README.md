@@ -5,7 +5,7 @@ This page will discuss an original concept of how to design Tableau report conte
 We inherit the same idea in the tableau reporting framework. At first, we introduce a robust naming convention for creating every single Tableau calculations within a workbook. Once we have created every calculation by this standard, we go on to introduce a Tableau folder structure which would logically group the data source fields as well as calculations built on top of them. 
 Finally, we present an API tool which will perform most of these design transitions automatically with no impact on the visualizations. 
 
-The automation feauture is the centre piece of  this design proposal.It is the automation part that makes the solution attractive since making these design tweaks manually requires significant manual efforts and would have otherwise proved a strong letdown when trying to use this proposal in realtime usecases.
+The automation feauture is the centre piece of  this design proposal.It is the automation part that makes the solution really attractive. Making these design tweaks manually requires significant efforts and would have otherwise proved a strong letdown when trying to use this proposal in realtime scnarios.The automation allows the solution to scale.
 
 Having said that ,Let us get started with the the first piece.
 
@@ -69,3 +69,4 @@ The API works on any tableau version. Most of the reports I have tested have tra
 I am also aware of the fact that owing to certain use cases, rolling back the data base column renames is not required. I have thus shared my code herewith. those who intend to use the tool only for the purpose of restructuring the tableau calculations could very well comment out the section of the code in which the database columns renames are restored.
 
 I hope the tool and the concept shared herewith are received well and eases out a sizable amount of maintenance overhead for tableau repositories.
+I look forward to the feedback from users who get to test it against their tabelea workbooks. 
