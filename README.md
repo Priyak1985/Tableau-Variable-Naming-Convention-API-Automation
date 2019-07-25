@@ -42,7 +42,7 @@ Thereafter, we apply the same folder structure to the measure pane as well.
 
 # Advantages of the Approach
 
-This approach makes the design process extremely robust and streamlined. Reports that prove to be extremely heavy with complex and chain of calculations will benefit largely from the approach. The merit of keeping the special LOD calculations under one folder is that a developer can always keep track of how many LOD calculationslies in the report. Furthermore, Since context filters ( or the lack of them) impacts LOD calculations (depending on the usage of 'Fixed' keyword) , a developer can quickly browse through the entire set of special calculations prior to making any additions or modifications to the filters of a report. Such as trying to gauge how many special calculations may get upset if a filter is removed from context.
+This approach makes the design process extremely robust and streamlined. Reports that prove to be extremely heavy with complex and chain of calculations will benefit largely from the approach. The merit of keeping the special LOD calculations under one folder is that a developer can always keep track of how many LOD calculations lie in the report. Furthermore, since context filters ( or the lack of them) impacts LOD calculations (depending on the usage of 'Fixed' keyword) , a developer can quickly browse through the entire set of special calculations prior to making any additions or modifications to the filters of a report. Such as trying to gauge how many special calculations may get upset if a filter is removed from context.
 This design structure is very easy to introduce and extremely effective for complex reports with series of calculations in the reports. 
 
 # Automation of the Design Transition
