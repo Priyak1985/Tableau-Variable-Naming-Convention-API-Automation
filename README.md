@@ -2,7 +2,7 @@
 
 This page will discuss an original concept of how to design Tableau report contents in a very simple yet efficient manner.It would make  maintenance of tableau report contents exceptionally easy. The idea originates from the simple coding guidelines that coders follow while programing in any language. While writing a code , a coder always prefixes his variables used in the code to identify the data types easily.This practice has multiple merits.
 
-We inherit the same idea in the tableau reporting framework. At first, we introduce a robust naming convention for creating every single Tableau calculations within a workbook. Once we have created every calculation by this standard, we go on to introduce a Tableau folder structure which would logically group the fields and calculations residng inside a Tableau workbook. 
+We inherit the same idea in the tableau reporting framework. At first, we introduce a robust naming convention for creating every single Tableau calculations within a workbook. Once we have created every calculation by this standard, we introduce a Tableau folder structure which would logically group the fields and calculations residng inside the workbook. 
 Finally, we present an API tool which will perform most of these design transitions automatically with no impact on the visualizations. 
 
 The automation feauture is the centre piece of  this design proposal.It is the automation part that makes the solution really attractive. Making these design tweaks manually requires significant efforts and would have otherwise proved a strong letdown when trying to use this proposal in realtime scnarios.The automation allows the solution to scale.
