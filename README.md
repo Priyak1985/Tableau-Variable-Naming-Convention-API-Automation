@@ -1,6 +1,6 @@
 # Introduction : A Concept for Best  Design Practice, Tableau Reports
 
-This page will discuss an original concept of how to design Tableau report contents in a very simple yet efficient manner which would make future maintenance of the contents exceptionally easy. The concept originates from the simple naming guidelines that coders follow while coding in any language. While writing a code , a coder prefixes his variables used in the code to identify the data types easily.
+This page will discuss an original concept of how to design Tableau report contents in a very simple yet efficient manner.It would make  maintenance of tableau report contents exceptionally easy. The idea originates from the simple coding guidelines that coders follow while programing in any language. While writing a code , a coder always prefixes his variables used in the code to identify the data types easily.This practice has multiple merits.
 
 We inherit the same idea in the tableau reporting framework. At first, we introduce a robust naming convention for creating every single Tableau calculations within a workbook. Once we have created every calculation by this standard, we go on to introduce a Tableau folder structure which would logically group the data source fields as well as calculations built on top of them. 
 Finally, we present an API tool which will perform most of these design transitions automatically with no impact on the visualizations. 
