@@ -1,7 +1,10 @@
 # Introduction : A Concept for Best  Design Practice, Tableau Reports
 
-This page will discuss an original concept of how to design Tableau report contents in a very simple yet efficient manner which would make future maintenance of the contents exceptionally easy. The concept originates from the simple naming guidelines that coders follow while coding in any language. A coder prefixes the variables used inside the code to identify the data types very easily. We inherit the same idea in the tableau reporting framework and expand on the same. We first introduce a robust naming convention for creating Tableau calculations. Once we have created every calculation by this standard, we go on to introduce a Tableau folder structure which would logically group the data source fields as well as calculations built on top of them. Finally, we present an API solution which will perform most of the design transition automatically with no impact on the visualizations. The automation feauture is the centre piece of  this proposal.This is what makes the solution attractive since making these design tweaks manually requires significant manual efforts which would have otherwise proved a strong letdown.
-Let us get started with the underlying naming standard
+This page will discuss an original concept of how to design Tableau report contents in a very simple yet efficient manner which would make future maintenance of the contents exceptionally easy. The concept originates from the simple naming guidelines that coders follow while coding in any language. A coder prefixes the variables used inside the code to identify the data types very easily. 
+We inherit the same idea in the tableau reporting framework and expand the idea. We at first introduce a robust naming convention for creating Tableau calculations within a workbook. Once we have created every calculation by this standard, we go on to introduce a Tableau folder structure which would logically group the data source fields as well as calculations built on top of them. 
+Finally, we present an API tool which will perform most of these design transitions automatically with no impact on the visualizations. The automation feauture is the centre piece of  this proposal.This is what makes the solution attractive since making these design tweaks manually requires significant manual efforts and would have otherwise proved a strong letdown for this concept to scale.
+
+Having said that ,Let us get started with the the first piece.
 
 #  Details of The Naming Convention
 
