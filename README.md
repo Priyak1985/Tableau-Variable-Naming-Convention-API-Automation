@@ -62,4 +62,4 @@ The API works on any tableau version. Most of the reports I have tested have tra
 
 I am also aware of the fact that owing to certain use cases, rolling back the data base column renames is not required. I have thus shared my code herewith. those who intend to use the tool only for the purpose of restructuring the tableau calculations could very well comment out the section of the code in which the database columns renames are restored.
 
-I hope the tool and the concept shared herewith is received well and eases out a sizable amount of maintenance overhead for tableau repositories.
+I hope the tool and the concept shared herewith are received well and eases out a sizable amount of maintenance overhead for tableau repositories.
