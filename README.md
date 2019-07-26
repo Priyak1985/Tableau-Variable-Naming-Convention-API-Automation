@@ -4,7 +4,7 @@ This page will discuss an original concept of how to design Tableau report conte
 The core idea behind the concept originates from the simple coding guidelines that every coder follows. While writing a code, a coder always prefixes his variables used in the code to identify the data types. This practice has multiple merits. We inherit the same practice in a Tableau reporting environment.
 
 At first, we introduce a robust naming convention for creating every single Tableau calculation within a workbook. Thereafter, we introduce a Tableau folder structure which would logically group the fields and calculations. Finally, we present an API tool which will perform most of these design transitions in the workbook automatically with no impact on the visualizations. 
-This automation feature is the center piece of this design proposal. It is the automation part that makes this solution truly novel. Making these design tweaks manually requires significant efforts and would have otherwise proved a letdown while trying to use this solution in Realtime use cases. The automation allows the solution to scale.
+This automation feature is the center piece of this design proposal. It is the automation part that makes this solution truly novel. Making these design tweaks manually requires significant efforts and hence without the API piece ,the solution would have  proved to be a spoiler in realtime use cases. The automation allows the solution to scale.
 
 Having said that, Let us get started with the first piece.
 
