@@ -1,4 +1,4 @@
-# Tableau: Naming standard for calculations & how to automate it by an API
+# Tableau: Naming Standard for Variables & How To Automate It Through an API
 
 This page will discuss an original concept of how to design Tableau report contents in a simple yet efficient manner. This discussion is not about the best ways of designing visuals. Rather, it is about an efficient method to create and store the series of variables that power these visuals. This concept makes maintenance of Tableau reports exceptionally easy and streamlined. 
 The core idea behind the concept originates from the simple coding guidelines that every coder follows. While writing a code, a coder always prefixes his variables used in the code to identify the data types. This practice has multiple merits. We inherit the same practice in a Tableau reporting environment.
