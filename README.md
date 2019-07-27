@@ -24,7 +24,7 @@ Each element in a dimension pane can be classified by any one of the following.
 
 Once we have created the dimension variables as per the standards, we could now group them logically inside Tableau within three major folders. The attached screen shot illustrates how to achieve it.
 
-![](https://github.com/Priyak1985/Tableau-Best-Practice-Concept/blob/master/Screen%20shot%201.PNG)
+![](https://github.com/Priyak1985/Tableau-Variable-Naming-Convention-API-Automation/blob/master/Screen%20Shot%201.png)
 
 ###  Measure Pane
 
@@ -36,7 +36,7 @@ Using the same guidelines, we design the numeric calculations in the report. Eac
 Thereafter, we apply the same folder structure to the measure pane as well.
 
 
-![](https://github.com/Priyak1985/Tableau-Best-Practice-Concept/blob/master/Screen%20shot%202.PNG)
+![](https://github.com/Priyak1985/Tableau-Variable-Naming-Convention-API-Automation/blob/master/Screen%20Shot%202.png)
 
 
 # Advantages of the Approach
