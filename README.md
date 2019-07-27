@@ -41,7 +41,7 @@ This design structure is very easy to introduce and extremely effective for comp
 
 # Automation of the Design Transition
 The design structure so proposed here has definite merit. But was it to be implemented manually to existing reports manually, the effort needed to do so would have been a bottleneck. It requires tedious effort to go inside the reports change the variable names one by one and thereafter folder them appropriately. the initial pain would have outweighed the gain.
-Thankfully, there is a way to avoid the bottleneck.** I have designed a python API ( shared here ) that would do most of these heavy lifting by itself**. When I say Heavy lifting , it means that for each data connection in the report , the API
+Thankfully, there is a way to avoid the bottleneck. I have designed a python API ( shared here ) that would do most of these heavy lifting by itself. When I say Heavy lifting , it means that for each data connection in the report , the API
     
                         1) Identifies and restores any database column renames.
                         2) Applies the naming convention of prefixing tableau calculations. 
