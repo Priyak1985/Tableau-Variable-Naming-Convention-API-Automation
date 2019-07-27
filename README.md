@@ -1,29 +1,23 @@
-# Tableau: Naming standard for variables & how to apply it through an API
+#  Introduction 
 
-This page will discuss an original concept of how to design Tableau report contents in a simple yet efficient manner. This discussion is not about the best ways of designing visuals. Rather, it is about an efficient method to create and store the series of variables that power these visuals. This concept makes maintenance of Tableau reports exceptionally easy and streamlined. 
-The core idea behind the concept originates from the simple coding guidelines that every coder follows. While writing a code, a coder always prefixes his variables used in the code to identify the data types. This practice has multiple merits. We inherit the same practice in a Tableau reporting environment.
-
-At first, we introduce a robust naming convention for creating every single Tableau calculation within a workbook. Thereafter, we introduce a Tableau folder structure which would logically group the fields and calculations. Finally, we present an API tool which will perform most of these design transitions in the workbook automatically with no impact on the visualizations. 
-This automation feature is the center piece of this design proposal. It is the automation part that makes this solution truly novel. Making these design tweaks manually requires significant efforts and hence without the API piece ,the solution would have  proved to be a spoiler in realtime use cases. The automation allows the solution to scale.
-
-Having said that, Let us get started with the first piece.
+This page will discuss an original concept of how to design Tableau report contents in a very simple yet efficient manner which would make future maintenance of the contents exceptionally easy. The concept originates from the simple naming guidelines that coders follow while coding in any language. A coder prefixes the variables used inside the code to identify the data types very easily. We inherit the same idea in the tableau reporting framework and expand on the same. We first introduce a robust naming convention for creating Tableau calculations. Once we have created every calculation by this standard, we go on to introduce a Tableau folder structure which would logically group the data source fields as well as calculations built on top of them. Finally, we present an API solution which will perform most of the design transition automatically with no impact on the visualizations. The automation piece gives this proposal much traction since making these design tweaks manually requires significant manual efforts which would have proved a letdown.
+Let us get started with the underlying naming standard
 
 #  Details of The Naming Convention
 
-The two major field identifiers within Tableau are the "Dimension" and "Measure". The proposed solution covers both the Dimension and Measure elements.
+The two major field identifiers within tableau are the "Dimension" and "Measure". The proposed variable structure is applied to both the dimension and Measure pane. The concept is similar for both dimension and measure variables.Details follow:
+
 ###  Dimension Pane
 Each element in a dimension pane can be classified by any one of the following.
 
  1. Source Dimensions: The original database columns that the report connects to. The fields should be kept at its original form and no renaming of the database fields should ideally occur.
 
- 2. Internal Calculations: Any non-numeric calculation(built on top of the source dimensions) that are not used in any Tableau worksheet directly. Instead, they are referred by other calculations. Hence the name Internal. While creating these internal calculations, one must use the prefix 'Calc_' in the name of the variables. Also, if the calculation happens to use any of the 
-'level of Detail' keywords, such as: 'Include' or 'Fixed', One would need to use the prefix 'Calc_LOD_' and 'Calc_LODF_' respectively. The letter 'F' in 'Calc_LODF_’ identifies those variable which use the keyword 'Fixed' in the formula specifically. The merits of such detailed naming standards will be discussed in the subsequent sections.
+ 2. Internal Calculations: Any non numeric calculation variables that are not used in any tableau worksheets directly. Instead they are referred by other calculations. Hence the name Internal. While creating an internal calculation, one must use the prefix 'Calc_' in the name of the variable. Also, if the calculation happens to use any of the 'level of Detail' keywords, such as 'Include' or 'Fixed', One would need to use the prefix 'Calc_LOD_' and 'Calc_LODF_' respectively. The letter 'F' in 'Calc_LODF_'  identifies those variable which use the keyword 'Fixed' in the formula specifically. The merits of such detailed naming standards will be discussed in the subsequent sections.
 
  
- 3. Visualization Facing Calculations: Tableau calculations that are used directly in the visuals fall in this third category. The name of the variables will therefore be exactly the way one would like them to appear on the charts.
-There is one finer detail to take note of. In cases wherein a 'LOD' calculation must be used in a visualization: instead of using them directly in a worksheet, create an internal calculation (with naming standard) with the formula. Then, create a visualization facing variable that would just have the name of this internal variable as its formula. In this way, one could logically store every special calculation of the workbook at one single place. Changes made to the calculations will still percolate up to the charts.
+ 3. Visualization Facing Calculations: Tableau calculations that are used directly in the visuals fall in this third category. The name of the variables will therefore be exactly the way once would like to appear on the charts. There is one finer detail introduced here. In cases wherein a 'LOD' calculation has to be used in a visualization: instead of using them directly in a worksheet, create an internal calculation (with the right naming standard) first with the formula. Then, create a variable that would just have the name of the internal variable you just created.In this way, one could keep track of the number 
 
-Once we have created the dimension calculations abiding to the above standards, we could now group them logically within three major folders. The attached screen shot illustrates how to achieve it.
+Once we have created the dimension calculations abiding to the above standards, we could now group them logically within tableau within three major folders. The attached screen shot illustrates how to achieve it.
 
 ![](https://github.com/Priyak1985/Tableau-Best-Practice-Concept/blob/master/Screen%20shot%201.PNG)
 
@@ -31,9 +25,9 @@ Once we have created the dimension calculations abiding to the above standards, 
 
 Using the same guidelines, we design the numeric calculations in the report. Each element in the measure pane can be categorized in the same fashion as cited above. 
 
-  1. Source measures: The original database numeric fields
-  2. Internal calculations: The naming convention of applying prefixes being identical as that for dimensions.
-  3. Visualization facing calculations: The naming convention remains identical as measures variables. Whenever LOD calculations are required to be used in a visual directly, we create an internal calculation first and then wrap it up with a second variable (visualization facing). This second variable will be used in the visuals instead. 
+  1. Source measures : The original database numeric fields
+  2. Internal calculations : The naming convention of applying prefixes being identical as that for dimensions.
+  3. Visualization facing calculations : The naming convention remains identical as measures variables. Whenever LOD calculations are required to be used in a visual directly, we create an internal calculation first and then wrap it up with a second variable ( visualization facing) that refers to the internal calculation. This second variable will be used in the visuals instead. 
 Thereafter, we apply the same folder structure to the measure pane as well.
 
 
@@ -42,26 +36,27 @@ Thereafter, we apply the same folder structure to the measure pane as well.
 
 # Advantages of the Approach
 
-This approach makes the design process extremely robust and streamlined. Reports that prove to be extremely heavy with complex and chain of calculations will benefit largely from the approach. The merit of keeping the special LOD calculations under one folder is that a developer can always keep track of how many LOD calculations lie in the report. Furthermore, since context filters (or the lack of them) impacts LOD calculations (depending on the usage of 'Fixed' keyword) , a developer can quickly browse through the entire set of special calculations prior to making any additions or modifications to the filters of a report. Such as trying to gauge how many special calculations may get upset if a filter is removed from context.
+This approach makes the design process extremely robust and streamlined. Reports that prove to be extremely heavy with complex and chain of calculations will benefit largely from the approach. The merit of keeping the special LOD calculations under one folder is that a developer can always keep track of how many LOD calculations does the report have even if they scale very quickly. Furthermore, Since context filters ( or the lack of them) impacts LOD calculations ( and does not impact the ones with 'Fixed' keyword) , a developer can quickly browse through the entire set of special calculations prior to making any additions or modifications to the filters of a report.
 This design structure is very easy to introduce and extremely effective for complex reports with series of calculations in the reports. 
 
 # Automation of the Design Transition
-The design structure so proposed here has indeed merit. But should it to be implemented to existing reports manually, the effort needed to do so would have been a clear spoiler. It requires tedious development work to go inside the reports and change the variable names one by one. The initial pain would have outweighed the eventual gain comfortably.
-Thankfully, there is a way to avoid the bottleneck. I have designed a python API (shared here ) that would do most of these heavy lifting by itself. When I say 'heavy lifting’, it means the API
+The design structure so proposed here has definite merit. But was it to be implemented manually to existing reports manually, the effort needed to do so would have been a bottleneck. It requires tedious effort to go inside the reports change the variable names one by one and thereafter folder them appropriately. the initial pain would have outweighed the gain.
+Thankfully, there is a way to avoid the bottleneck.** I have designed a python API ( shared here ) that would do most of these heavy lifting by itself**. When I say Heavy lifting , it means that for each data connection in the report , the API
     
                         1) Identifies and restores any database column renames.
-                        2) Applies the naming convention of prefixing Tableau calculations. 
+                        2) Applies the naming convention of prefixing tableau calculations. 
                         3) Folders the variables the right way.
 
-This is repeated for each data source a workbook connects to. 
+The API is written completely in Python. Please download the API form this  [GOOGLE DRIVE LINK](https://drive.google.com/open?id=1iFmsKL2wDcoQsmgkqmuskVNsSc9L53rs)
+
 
 # Instructions to Use the API
 
-The API will scan the Tableau files (.twb) placed in the same folder as that of the API and create a sub-folder with the new transformed reports. The original reports will remain untouched. The API is called the ‘Best_Practice_Implementation_Tool'.
-its a standalone executable with no external dependency. The API works on any Tableau version. 
+The API and the Tableau files identified for the transformation need to reside under the same folder. Once you click on the API tool, the API will scan the tableau files (.twb) placed in the same folder and create a sub-folder with the new transformed reports. The original reports will remain untouched. The API is called the  'Best_Practice_Implementation_Tool'.
+Its a standalone executable with no external dependency.The API works on any tableau version. Most of the reports I have tested have transformed successfully with no impact on the charts. 
 
-Most of the reports I have tested have transformed successfully with no impact on the charts. However, some of the new files may appear corrupt because of trying to introduce the final piece -the Tableau folders. 
-Which is why the step of introducing the folders has been kept optional in the API ( The User will need to type yes or no to decide whether to apply folder structure) . Once the API performs the heavy lifting of renaming the Tableau fields appropriately, the foldering can always be done manually by a single click.
+However, some of the file copies may appear corrupt as a result of trying to introduce the final piece -the Tableau folders. Which is why the step of introducing the folders in the tableau report has been kept optional in the API ( The User will need to type yes or no to decide whether to apply folder structure) .
+ Once the API performs the heavy lifting of renaming the tableau fields appropriately, the foldering can always be done manually by a single click.
 
 
 ![](https://github.com/Priyak1985/Tableau-Best-Practice-Concept/blob/master/Screen%20shot%203.PNG)
@@ -69,9 +64,6 @@ Which is why the step of introducing the folders has been kept optional in the A
 ![](https://github.com/Priyak1985/Tableau-Best-Practice-Concept/blob/master/Screen%20shot%204.PNG)
 
 
-I am aware of the fact that certain use cases will also require retaining the database column renames in the reports as opposed to revert them. I have thus shared my python code herewith. those who intend to use the tool only for the purpose of restructuring the Tableau calculations could very well comment out the section of the code in which the database columns rename are restored.
+I am also aware of the fact that owing to certain use cases, rolling back the data base column renames is not required. I have thus shared my code herewith. those who intend to use the tool only for the purpose of restructuring the tableau calculations could very well comment out the section of the code in which the database columns renames are restored.
 
-I hope the concept and the tool shared herewith are received well and curbs a sizable amount of maintenance overhead that Tableau developers must bear. The solution should be able to scale to a large number of report repository without any hassle.
-
-I look forward to the feedback from users who get to test the tool it against their Tabeleau workbooks.
-
+I hope the tool and the concept shared herewith is received well and eases out a sizable amount of maintenance overhead for tableau repositories.
